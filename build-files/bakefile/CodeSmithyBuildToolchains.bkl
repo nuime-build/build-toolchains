@@ -1,16 +1,17 @@
 ishikopath = envvar("ISHIKO_CPP_ROOT");
 import $(ishikopath)/process/include/Ishiko/Process.bkl;
 
-toolsets = gnu vs2022 vs2019 vs2017 vs2015;
+toolsets = gnu vs2022 vs2019 vs2017;
 
 gnu.makefile = ../gnumake/GNUmakefile;
 vs2022.solutionfile = ../vc17/CodeSmithyBuildToolchains.sln;
 vs2019.solutionfile = ../vc16/CodeSmithyBuildToolchains.sln;
 vs2017.solutionfile = ../vc15/CodeSmithyBuildToolchains.sln;
-vs2015.solutionfile = ../vc14/CodeSmithyBuildToolchains.sln;
 
 library CodeSmithyBuildToolchains : IshikoProcess
 {
+    archs = x86 x86_64;
+
     includedirs += ../../include/CodeSmithy/BuildToolchains;
 
     if ($(toolset) == gnu)
@@ -21,7 +22,7 @@ library CodeSmithyBuildToolchains : IshikoProcess
 
     if ($(toolset) != gnu)
     {
-        archs = x86 x86_64;
+        cxx-compiler-options = "/utf-8";
         outputdir = ../../lib/$(arch);
     }
 
