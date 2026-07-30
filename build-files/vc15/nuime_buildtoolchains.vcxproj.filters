@@ -17,25 +17,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains.hpp">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains\BuildToolchainErrorCategory.h">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains\BuildToolchainErrorCategory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains\CMakeGenerationOptions.h">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains\CMakeGenerationOptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains\CMakeToolchain.h">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains\CMakeToolchain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains\linkoptions.hpp">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains\linkoptions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains\MakeToolchain.h">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains\MakeToolchain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\CodeSmithy\BuildToolchains\MSBuildToolchain.h">
+    <ClInclude Include="..\..\include\Nuime\BuildToolchains\MSBuildToolchain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
