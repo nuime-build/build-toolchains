@@ -1,5 +1,5 @@
 nuimepath = envvar("NUIME_ROOT");
-import $(nuimepath)/build-toolchains/include/Nuime/CodeSmithyBuildToolchains.bkl;
+import $(nuimepath)/build-toolchains/include/Nuime/NuimeBuildToolchains.bkl;
 ishikopath = envvar("ISHIKO_CPP_ROOT");
 import $(ishikopath)/test-framework/include/Ishiko/TestFramework.bkl;
 
@@ -10,7 +10,7 @@ vs2022.solutionfile = ../vc17/nuime_buildtoolchains_tests.sln;
 vs2019.solutionfile = ../vc16/nuime_buildtoolchains_tests.sln;
 vs2017.solutionfile = ../vc15/nuime_buildtoolchains_tests.sln;
 
-program nuime_buildtoolchains_tests : CodeSmithyBuildToolchains, IshikoTestFramework
+program nuime_buildtoolchains_tests : NuimeBuildToolchains, IshikoTestFramework
 {
     archs = x86 x86_64;
 
