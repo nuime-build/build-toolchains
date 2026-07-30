@@ -5,37 +5,37 @@ jobs:
       - image: codesmithy/gcc-bootstrap-build-prerequisites:0.14.0
     steps:
       - run: 
-          name: "Set CODESMITHYIDE_ROOT environment variables"
-          command: echo 'export CODESMITHYIDE_ROOT="/workspace/projects/codesmithyide"' >> $BASH_ENV
+          name: "Set NUIME_ROOT environment variables"
+          command: echo 'export NUIME_ROOT="/workspace/projects/nuime-build"' >> $BASH_ENV
       - checkout:
-          path: /workspace/projects//codesmithyide/build-toolchains
+          path: /workspace/projects/nuime-build/build-toolchains
       - run:
           name: Build
-          command: cd /workspace/projects//codesmithyide/build-toolchains/build-files/gnumake && make
+          command: cd /workspace/projects/nuime-build/build-toolchains/build-files/gnumake && make
       - run:
           name: Test build
-          command: cd /workspace/projects//codesmithyide/build-toolchains/tests/build-files/gnumake && make
+          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && make
       - run:
           name: Run the tests
-          command: cd /workspace/projects//codesmithyide/build-toolchains/tests/build-files/gnumake && ./CodeSmithyBuildToolchainsTests
+          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && ./CodeSmithyBuildToolchainsTests
   build:
     docker:
       - image: codesmithy/gcc-build-prerequisites:0.18.0
     steps:
       - run:
-          name: "Set CODESMITHYIDE_ROOT environment variables"
-          command: echo 'export CODESMITHYIDE_ROOT="/workspace/projects//codesmithyide"' >> $BASH_ENV
+          name: "Set NUIME_ROOT environment variables"
+          command: echo 'export NUIME_ROOT="/workspace/projects/nuime-build"' >> $BASH_ENV
       - checkout:
-          path: /workspace/projects//codesmithyide/build-toolchains
+          path: /workspace/projects/nuime-build/build-toolchains
       - run:
           name: Build
-          command: cd /workspace/projects//codesmithyide/build-toolchains/build-files/gnumake && make
+          command: cd /workspace/projects/nuime-build/build-toolchains/build-files/gnumake && make
       - run:
           name: Test build
-          command: cd /workspace/projects//codesmithyide/build-toolchains/tests/build-files/gnumake && make
+          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && make
       - run:
           name: Run the tests
-          command: cd /workspace/projects//codesmithyide/build-toolchains/tests/build-files/gnumake && ./CodeSmithyBuildToolchainsTests
+          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && ./CodeSmithyBuildToolchainsTests
 workflows:
   version: 2
   continuous_build:
