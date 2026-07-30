@@ -17,7 +17,7 @@ jobs:
           command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && make
       - run:
           name: Run the tests
-          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && ./CodeSmithyBuildToolchainsTests
+          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && ./nuime_buildtoolchains_tests
   build:
     docker:
       - image: codesmithy/gcc-build-prerequisites:0.18.0
@@ -35,7 +35,7 @@ jobs:
           command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && make
       - run:
           name: Run the tests
-          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && ./CodeSmithyBuildToolchainsTests
+          command: cd /workspace/projects/nuime-build/build-toolchains/tests/build-files/gnumake && ./nuime_buildtoolchains_tests
 workflows:
   version: 2
   continuous_build:
