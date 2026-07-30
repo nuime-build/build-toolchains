@@ -5,7 +5,7 @@
 #include "BuildToolchainErrorCategory.h"
 #include <Ishiko/BasePlatform.hpp>
 
-using namespace CodeSmithy;
+using namespace Nuime;
 
 namespace
 {

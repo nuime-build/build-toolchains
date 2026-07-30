@@ -8,7 +8,7 @@
 
 using namespace Ishiko;
 
-namespace CodeSmithy
+namespace Nuime
 {
 
 const BuildToolchainErrorCategory& BuildToolchainErrorCategory::Get() noexcept

@@ -7,7 +7,7 @@
 #include <Ishiko/Process.hpp>
 #include <boost/filesystem.hpp>
 
-using namespace CodeSmithy;
+using namespace Nuime;
 
 CMakeToolchainTests::CMakeToolchainTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context)
     : Ishiko::TestSequence(number, "CMakeToolchain tests", context)

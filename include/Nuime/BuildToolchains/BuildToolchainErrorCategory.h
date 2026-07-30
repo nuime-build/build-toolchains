@@ -10,7 +10,7 @@
 #include <Ishiko/Errors.hpp>
 #include <string>
 
-namespace CodeSmithy
+namespace Nuime
 {
 
 class BuildToolchainErrorCategory : public Ishiko::ErrorCategory

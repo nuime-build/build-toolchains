@@ -17,7 +17,7 @@ MakeToolchainTests::MakeToolchainTests(const TestNumber& number, const TestConte
 
 void MakeToolchainTests::ConstructorTest1(Test& test)
 {
-    CodeSmithy::MakeToolchain toolchain;
+    Nuime::MakeToolchain toolchain;
 
     ISHIKO_TEST_PASS();
 }
