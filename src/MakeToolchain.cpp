@@ -8,7 +8,7 @@
 #include "BuildToolchainErrorCategory.h"
 #include <boost/filesystem/path.hpp>
 
-namespace CodeSmithy
+namespace Nuime
 {
 
 namespace

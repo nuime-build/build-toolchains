@@ -8,7 +8,7 @@
 #include <Ishiko/Process.hpp>
 #include <string>
 
-namespace CodeSmithy
+namespace Nuime
 {
     class CMakeToolchain
     {

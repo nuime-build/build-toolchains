@@ -1,13 +1,13 @@
-// SPDX-FileCopyrightText: 2015-2024 Xavier Leclercq
+// SPDX-FileCopyrightText: 2015-2026 Xavier Leclercq
 // SPDX-License-Identifier: MIT
 
 #include "CMakeToolchainTests.h"
-#include "CodeSmithy/BuildToolchains/CMakeToolchain.h"
+#include "Nuime/BuildToolchains/CMakeToolchain.h"
 #include <Ishiko/BasePlatform.hpp>
 #include <Ishiko/Process.hpp>
 #include <boost/filesystem.hpp>
 
-using namespace CodeSmithy;
+using namespace Nuime;
 
 CMakeToolchainTests::CMakeToolchainTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context)
     : Ishiko::TestSequence(number, "CMakeToolchain tests", context)

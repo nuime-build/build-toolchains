@@ -1,0 +1,53 @@
+ishikopath = envvar("ISHIKO_CPP_ROOT");
+import $(ishikopath)/process/include/Ishiko/Process.bkl;
+
+toolsets = gnu vs2022 vs2019 vs2017;
+
+gnu.makefile = ../gnumake/GNUmakefile;
+vs2022.solutionfile = ../vc17/nuime_buildtoolchains.sln;
+vs2019.solutionfile = ../vc16/nuime_buildtoolchains.sln;
+vs2017.solutionfile = ../vc15/nuime_buildtoolchains.sln;
+
+library nuime_buildtoolchains : IshikoProcess
+{
+    archs = x86 x86_64;
+
+    includedirs += ../../include/Nuime/BuildToolchains;
+
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11";
+        outputdir = ../../lib;
+    }
+
+    if ($(toolset) != gnu)
+    {
+        cxx-compiler-options = "/utf-8";
+        outputdir = ../../lib/$(arch);
+    }
+
+    if ($(config) == Debug)
+    {
+        basename = nuime_buildtoolchains-d;
+    }
+
+    headers
+    {
+        ../../include/Nuime/BuildToolchains.hpp
+        ../../include/Nuime/BuildToolchains/BuildToolchainErrorCategory.h
+        ../../include/Nuime/BuildToolchains/CMakeGenerationOptions.h
+        ../../include/Nuime/BuildToolchains/CMakeToolchain.h
+        ../../include/Nuime/BuildToolchains/linkoptions.hpp
+        ../../include/Nuime/BuildToolchains/MakeToolchain.h
+        ../../include/Nuime/BuildToolchains/MSBuildToolchain.h
+    }
+
+    sources
+    {
+        ../../src/BuildToolchainErrorCategory.cpp
+        ../../src/CMakeGenerationOptions.cpp
+        ../../src/CMakeToolchain.cpp
+        ../../src/MakeToolchain.cpp
+        ../../src/MSBuildToolchain.cpp
+    }
+}

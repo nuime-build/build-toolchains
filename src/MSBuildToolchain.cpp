@@ -7,7 +7,7 @@
 #include "MSBuildToolchain.h"
 #include "BuildToolchainErrorCategory.h"
 
-namespace CodeSmithy
+namespace Nuime
 {
 
 namespace

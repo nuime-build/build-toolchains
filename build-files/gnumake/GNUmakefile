@@ -87,31 +87,31 @@ ISHIKO_CPP_PROCESS_ROOT ?= $(ISHIKO_CPP_ROOT)/process
 
 # ------------
 
-all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),CodeSmithyBuildToolchains-d,CodeSmithyBuildToolchains).a
+all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),nuime_buildtoolchains-d,nuime_buildtoolchains).a
 
-../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),CodeSmithyBuildToolchains-d,CodeSmithyBuildToolchains).a: $(_builddir)CodeSmithyBuildToolchains_BuildToolchainErrorCategory.o $(_builddir)CodeSmithyBuildToolchains_CMakeGenerationOptions.o $(_builddir)CodeSmithyBuildToolchains_CMakeToolchain.o $(_builddir)CodeSmithyBuildToolchains_MakeToolchain.o $(_builddir)CodeSmithyBuildToolchains_MSBuildToolchain.o
-	$(AR) rc $@ $(_builddir)CodeSmithyBuildToolchains_BuildToolchainErrorCategory.o $(_builddir)CodeSmithyBuildToolchains_CMakeGenerationOptions.o $(_builddir)CodeSmithyBuildToolchains_CMakeToolchain.o $(_builddir)CodeSmithyBuildToolchains_MakeToolchain.o $(_builddir)CodeSmithyBuildToolchains_MSBuildToolchain.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),nuime_buildtoolchains-d,nuime_buildtoolchains).a: $(_builddir)nuime_buildtoolchains_BuildToolchainErrorCategory.o $(_builddir)nuime_buildtoolchains_CMakeGenerationOptions.o $(_builddir)nuime_buildtoolchains_CMakeToolchain.o $(_builddir)nuime_buildtoolchains_MakeToolchain.o $(_builddir)nuime_buildtoolchains_MSBuildToolchain.o
+	$(AR) rc $@ $(_builddir)nuime_buildtoolchains_BuildToolchainErrorCategory.o $(_builddir)nuime_buildtoolchains_CMakeGenerationOptions.o $(_builddir)nuime_buildtoolchains_CMakeToolchain.o $(_builddir)nuime_buildtoolchains_MakeToolchain.o $(_builddir)nuime_buildtoolchains_MSBuildToolchain.o
 	$(RANLIB) $@
 
-$(_builddir)CodeSmithyBuildToolchains_BuildToolchainErrorCategory.o: ../../src/BuildToolchainErrorCategory.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/CodeSmithy/BuildToolchains -std=c++11 ../../src/BuildToolchainErrorCategory.cpp
+$(_builddir)nuime_buildtoolchains_BuildToolchainErrorCategory.o: ../../src/BuildToolchainErrorCategory.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/Nuime/BuildToolchains -std=c++11 ../../src/BuildToolchainErrorCategory.cpp
 
-$(_builddir)CodeSmithyBuildToolchains_CMakeGenerationOptions.o: ../../src/CMakeGenerationOptions.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/CodeSmithy/BuildToolchains -std=c++11 ../../src/CMakeGenerationOptions.cpp
+$(_builddir)nuime_buildtoolchains_CMakeGenerationOptions.o: ../../src/CMakeGenerationOptions.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/Nuime/BuildToolchains -std=c++11 ../../src/CMakeGenerationOptions.cpp
 
-$(_builddir)CodeSmithyBuildToolchains_CMakeToolchain.o: ../../src/CMakeToolchain.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/CodeSmithy/BuildToolchains -std=c++11 ../../src/CMakeToolchain.cpp
+$(_builddir)nuime_buildtoolchains_CMakeToolchain.o: ../../src/CMakeToolchain.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/Nuime/BuildToolchains -std=c++11 ../../src/CMakeToolchain.cpp
 
-$(_builddir)CodeSmithyBuildToolchains_MakeToolchain.o: ../../src/MakeToolchain.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/CodeSmithy/BuildToolchains -std=c++11 ../../src/MakeToolchain.cpp
+$(_builddir)nuime_buildtoolchains_MakeToolchain.o: ../../src/MakeToolchain.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/Nuime/BuildToolchains -std=c++11 ../../src/MakeToolchain.cpp
 
-$(_builddir)CodeSmithyBuildToolchains_MSBuildToolchain.o: ../../src/MSBuildToolchain.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/CodeSmithy/BuildToolchains -std=c++11 ../../src/MSBuildToolchain.cpp
+$(_builddir)nuime_buildtoolchains_MSBuildToolchain.o: ../../src/MSBuildToolchain.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_MEMORY_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_PROCESS_ROOT)/include -I../../include/Nuime/BuildToolchains -std=c++11 ../../src/MSBuildToolchain.cpp
 
 clean:
 	rm -f $(_builddir)*.o
 	rm -f $(_builddir)*.d
-	rm -f ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),CodeSmithyBuildToolchains-d,CodeSmithyBuildToolchains).a
+	rm -f ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),nuime_buildtoolchains-d,nuime_buildtoolchains).a
 
 .PHONY: all clean
 
