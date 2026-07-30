@@ -1,16 +1,16 @@
-codesmithyidepath = envvar("CODESMITHYIDE_ROOT");
-import $(codesmithyidepath)/build-toolchains/include/CodeSmithy/CodeSmithyBuildToolchains.bkl;
+nuimepath = envvar("NUIME_ROOT");
+import $(nuimepath)/build-toolchains/include/Nuime/CodeSmithyBuildToolchains.bkl;
 ishikopath = envvar("ISHIKO_CPP_ROOT");
 import $(ishikopath)/test-framework/include/Ishiko/TestFramework.bkl;
 
 toolsets = gnu vs2022 vs2019 vs2017;
 
 gnu.makefile = ../gnumake/GNUmakefile;
-vs2022.solutionfile = ../vc17/CodeSmithyBuildToolchainsTests.sln;
-vs2019.solutionfile = ../vc16/CodeSmithyBuildToolchainsTests.sln;
-vs2017.solutionfile = ../vc15/CodeSmithyBuildToolchainsTests.sln;
+vs2022.solutionfile = ../vc17/nuime_buildtoolchains_tests.sln;
+vs2019.solutionfile = ../vc16/nuime_buildtoolchains_tests.sln;
+vs2017.solutionfile = ../vc15/nuime_buildtoolchains_tests.sln;
 
-program CodeSmithyBuildToolchainsTests : CodeSmithyBuildToolchains, IshikoTestFramework
+program nuime_buildtoolchains_tests : CodeSmithyBuildToolchains, IshikoTestFramework
 {
     archs = x86 x86_64;
 
