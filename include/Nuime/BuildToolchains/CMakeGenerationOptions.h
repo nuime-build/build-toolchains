@@ -8,7 +8,7 @@
 #include <map>
 #include <string>
 
-namespace CodeSmithy
+namespace Nuime
 {
     class CMakeGenerationOptions
     {

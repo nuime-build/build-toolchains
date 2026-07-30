@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2020-2022 Xavier Leclercq
+    Copyright (c) 2020-2026 Xavier Leclercq
     Released under the MIT License
     See https://github.com/codesmithyide/build-toolchains/blob/main/LICENSE.txt
 */
 
 #include "MSBuildToolchainTests.h"
-#include "CodeSmithy/BuildToolchains/MSBuildToolchain.h"
+#include "Nuime/BuildToolchains/MSBuildToolchain.h"
 
 using namespace Ishiko;
 
@@ -17,7 +17,7 @@ MSBuildToolchainTests::MSBuildToolchainTests(const TestNumber& number, const Tes
 
 void MSBuildToolchainTests::ConstructorTest1(Test& test)
 {
-    CodeSmithy::MSBuildToolchain toolchain;
+    Nuime::MSBuildToolchain toolchain;
     
     ISHIKO_TEST_PASS();
 }

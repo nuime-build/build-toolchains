@@ -3,7 +3,7 @@
 
 #include "CMakeGenerationOptions.h"
 
-using namespace CodeSmithy;
+using namespace Nuime;
 
 CMakeGenerationOptions::CMakeGenerationOptions()
 {
