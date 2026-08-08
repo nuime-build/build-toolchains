@@ -27,7 +27,6 @@ void CMakeToolchainTests::ConstructorTest1(Ishiko::Test& test)
 void CMakeToolchainTests::GenerateTest1(Ishiko::Test& test)
 {
     const boost::filesystem::path& cmakelists_path = test.context().getOutputPath("GenerateTest1/CMakeLists.txt");
-    boost::filesystem::create_directories(cmakelists_path.parent_path());
     test.utils().copy("${context.data}/cmake/hello-world/CMakeLists.txt", cmakelists_path.string());
     test.utils().copy("${context.data}/cmake/hello-world/main.cpp", "${context.output}/GenerateTest1/main.cpp");
 
@@ -40,7 +39,6 @@ void CMakeToolchainTests::GenerateTest1(Ishiko::Test& test)
 void CMakeToolchainTests::GenerateTest2(Ishiko::Test& test)
 {
     const boost::filesystem::path& cmakelists_path = test.context().getOutputPath("GenerateTest2/CMakeLists.txt");
-    boost::filesystem::create_directories(cmakelists_path.parent_path());
     test.utils().copy("${context.data}/cmake/hello-world/CMakeLists.txt", cmakelists_path.string());
     test.utils().copy("${context.data}/cmake/hello-world/main.cpp", "${context.output}/GenerateTest2/main.cpp");
 
