@@ -11,6 +11,11 @@ using namespace Ishiko;
 namespace Nuime
 {
 
+BuildToolchainErrorCategory::BuildToolchainErrorCategory() noexcept
+    : ErrorCategory(ID(0xaf2004b884154a20ULL, 0xa18ecf97052a8a91ULL)) // af2004b8-8415-4a20-a18e-cf97052a8a91
+{
+}
+
 const BuildToolchainErrorCategory& BuildToolchainErrorCategory::Get() noexcept
 {
     static BuildToolchainErrorCategory theCategory;

@@ -28,7 +28,7 @@ public:
     const char* message(int ev, char* buffer, size_t len) const noexcept override;
 
 private:
-    BuildToolchainErrorCategory() noexcept = default;
+    BuildToolchainErrorCategory() noexcept;
 };
 
 void Fail(Ishiko::Error& error, BuildToolchainErrorCategory::Value value) noexcept;
